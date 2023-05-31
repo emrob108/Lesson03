@@ -1,0 +1,75 @@
+/*
+color palette
+https://coolors.co/palette/006d77-83c5be-edf6f9-ffddd2-e29578
+#006d77 - dark teal
+#83c5be - teal
+#edf6f9 - gray
+#ffddd2 - light peach
+#e29578 - peach
+*/
+
+/* Global styles
+-------------------*/
+body {
+    color: #006d77;
+}
+
+img {
+    width: 300px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Profile
+-------------------*/
+header {
+    background: #006d77;
+    color: #edf6f9;
+}
+
+/* Projects
+-------------------*/
+.projects {
+    background: #83c5be;
+}
+
+.projects a {
+    color: #006d77;
+}
+
+.projects .btn {
+    color: #edf6f9;
+    background: #e29578;
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.projects .btn:hover {
+    background: rgba(226, 149, 120, 80%);
+}
+
+/* Work Experience
+-------------------*/
+.work-experience {
+    background: #ffddd2;
+}
+
+/* Education
+-------------------*/
+.education {
+    background: #e29578;
+}
+
+/* Contact info
+-------------------*/
+footer {
+    background: #006d77;
+    color: #edf6f9;
+}
+
+footer a {
+    color: #edf6f9;
+}
