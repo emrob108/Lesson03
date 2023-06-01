@@ -10,8 +10,22 @@ https://coolors.co/palette/006d77-83c5be-edf6f9-ffddd2-e29578
 
 /* Global styles
 -------------------*/
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     color: #006d77;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 img {
@@ -20,6 +34,27 @@ img {
 
 a:hover {
     text-decoration: none;
+}
+
+h1 {
+    font-size: 50px;
+    text-shadow: 1px 4px 4px #e7825d;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h1, h2 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 400;
+    margin: 0;
+}
+
+.content-wrap {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
 /* Profile
@@ -45,10 +80,24 @@ header {
     text-decoration: none;
     padding: 6px;
     border-radius: 4px;
+    display: inline-block;
 }
 
 .projects .btn:hover {
     background: rgba(226, 149, 120, 80%);
+}
+
+.project-item {
+    overflow: hidden;
+}
+
+.project-item img {
+    float: left;
+    margin-right: 20px;
+}
+
+.project-item h3 {
+    margin-top: 0;
 }
 
 /* Work Experience
@@ -71,5 +120,5 @@ footer {
 }
 
 footer a {
-    color: #edf6f9;
+    color: #e29578;
 }
