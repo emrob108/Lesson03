@@ -1,0 +1,536 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+h1 {
+  grid-area: header;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 0%;
+  color: rgb(53, 53, 53);
+  font-family: "Bacasime Antique", serif;
+}
+
+.it {
+  font-style: italic;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.desktop-nav {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "DM Sans", sans-serif;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.desktop-nav a {
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+  font-family: "DM Sans", sans-serif;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn img {
+  width: 50px;
+}
+
+.dropbtn img:hover {
+  opacity: 0.6;
+}
+
+.dropbtn {
+  background-color: white;
+  border: none;
+  margin: 0;
+  padding-left: 12px;
+  padding-top: 10px;
+}
+
+.dropdown a:hover {
+  opacity: 0.6;
+}
+
+.desktop-nav a:hover {
+  opacity: 0.6;
+}
+
+header {
+  padding-top: 20px;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 0.22fr 0.45fr 0.22fr;
+  gap: 2.5em;
+  justify-content: center;
+  align-items: start;
+  padding: 1em;
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "DM Sans", sans-serif;
+  color: rgb(53, 53, 53);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.column img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.column-wide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.column-wide h2 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.column-wide p {
+  margin-top: 8px;
+}
+
+.column hr {
+  border-top: 1px solid #747474;
+  width: 100%;
+}
+
+.column h2 {
+  margin: 0.5em 0;
+  margin-bottom: 3px;
+  margin-top: 2px;
+}
+
+.column:first-child p {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.column:last-child p {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+h3 {
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+
+footer a {
+  margin: 0 10px;
+  outline: none;
+  text-decoration: none;
+}
+
+footer img {
+  width: 25px;
+  height: 25px;
+}
+
+footer img:hover {
+  opacity: 0.6;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: inherit;
+}
+
+.no-underline:hover {
+  color: gray;
+}
+
+.aboutmebtn,
+.projectsbtn,
+.experiencebtn {
+  font-size: 18px;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  font-family: "DM Sans", sans-serif;
+}
+
+.projectsbtn {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.aboutmebtn a,
+.projectsbtn a,
+.experiencebtn a {
+  text-decoration: none;
+  color: black;
+}
+
+.aboutmebtn {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.experiencebtn {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 15px;
+  width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+  }
+  body {
+    padding-top: 10px;
+  }
+  header {
+    padding-top: 90px;
+  }
+  main {
+    padding-top: 10px;
+    grid-template-columns: 1fr;
+  }
+  .column-wide {
+    order: -1;
+  }
+  .column {
+    order: 1;
+  }
+  .row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/************************* Projects CSS *************************/
+
+.container {
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.rowitem {
+  text-align: center;
+}
+
+.row img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  gap: 4em;
+  justify-items: center;
+  align-items: center;
+  width: fit-content;
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+
+.text-center {
+  text-align: center;
+  padding-top: 0;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container p {
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/**************** Contact Page *********************/
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  max-width: 65%;
+  margin: 0 auto;
+  position: relative;
+  gap: 15px;
+  padding-top: 20px;
+}
+.column {
+  flex: 1;
+  position: relative;
+}
+.column:nth-child(1) {
+  top: -68px;
+}
+.contact-me {
+  margin-top: 0%;
+  margin-bottom: 20px;
+  font-family: "Bacasime Antique", serif;
+  font-size: 2em;
+}
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  border: 2px solid black;
+  float: right;
+}
+form input {
+  font-size: 11px;
+  font-weight: bold;
+  font-family: "DM Sans", sans-serif;
+}
+form textarea {
+  border-radius: 15px;
+  font-size: 12.5px;
+  height: 130px;
+  font-weight: bold;
+  font-family: "DM Sans", sans-serif;
+}
+#contactColumn a {
+  text-decoration: none;
+  color: black;
+  transition: opacity 0.3s ease;
+}
+
+#contactColumn a:hover {
+  opacity: 0.8;
+}
+.contact-button {
+  width: 30%;
+  padding: 4px;
+  border: 2px solid black;
+  border-radius: 15px;
+  float: right;
+  background-color: white;
+  font-size: 14px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+}
+::-webkit-input-placeholder {
+  color: black;
+}
+::-moz-placeholder {
+  color: black;
+}
+:-ms-input-placeholder {
+  color: black;
+}
+:-moz-placeholder {
+  color: black;
+}
+
+h4 {
+  font-family: "DM Sans", sans-serif;
+  font-style: italic;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-container {
+    max-width: 100%;
+  }
+}
+
+/***************** About me *******************/
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  max-width: 85%;
+  margin: 0 auto;
+  position: relative;
+}
+#imageColumn {
+  position: relative;
+  display: flex;
+}
+.aboutMeImg {
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  max-width: 413px;
+  max-height: 460px;
+  height: auto;
+  margin-right: 7%;
+  justify-content: center;
+  margin-top: 40%;
+}
+#textColumn {
+  text-align: left;
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+  display: flex;
+}
+
+#aboutpagebtn {
+  width: 30%;
+  padding: 4px;
+  border: 2px solid black;
+  border-radius: 15px;
+  float: right;
+  background-color: white;
+  font-size: 14px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+}
+#aboutpagebtn a {
+  text-decoration: none;
+  color: black;
+}
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-container {
+    flex-direction: column;
+    max-width: 90%;
+  }
+}
+
+/**************** Experience **************/
+
+.experienceheader {
+  text-align: center;
+  margin-bottom: 5px;
+  font-family: "Bacasime Antique", serif;
+  font-size: 30px;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 1250px;
+}
+
+.card {
+  width: 31%;
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.horizontal-card-grid {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 1900px;
+  flex-wrap: wrap;
+}
+
+.horizontal-card {
+  width: 80%;
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 5px;
+  text-align: center;
+}
